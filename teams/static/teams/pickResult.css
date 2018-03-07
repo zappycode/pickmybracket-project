@@ -1,0 +1,160 @@
+@page
+{
+    size: landscape;  
+}
+
+@media print
+{
+    .outsideLinks { display: none; }
+    #message { display: none; }
+    #buttons { display: none; }
+    #fbLikeTopLeft { display: none; }
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.teamThang{
+   font-size: 9px; 
+}
+
+.outsideLinks
+{
+	position: absolute;
+	left: 50%;
+	z-index: 88;
+	cursor: pointer;
+	background-image: url(img/transparent.png);
+	/* border: 1px solid green; */
+}
+
+#fbLikeTopLeft
+{
+    position: absolute;
+    left: 50%;
+    z-index: 0;
+    margin-left: -464px;
+    top: 75px;
+}
+
+#opaque {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: black;
+    filter: alpha(opacity=30);
+    opacity: 0.4;
+}
+* html #opaque {
+    position: absolute;
+}
+
+#ipadLink
+{
+    height: 200px;
+    width: 400px;
+    top: 360px;
+    margin-left: -200px;
+}
+
+#homeLink
+{
+	height: 85px;
+	width: 500px;
+	top: 100px;
+	margin-left: -240px;
+}
+
+#homeLinkBottom
+{
+	height: 110px;
+	width: 265px;
+	top: 640px;
+	margin-left: -130px;
+}
+
+#facebooklink
+{
+	height: 50px;
+	width: 325px;
+	top: 730px;
+	margin-left: -330px;
+}
+
+#twitterlink
+{
+	height: 50px;
+	width: 325px;
+	top: 730px;
+	margin-left: 25px;
+}
+
+
+body{
+	background: rgb(32,65,78);
+}
+
+
+#logo{
+position: relative;
+top: 90px;
+left: 150px;
+border: 1px solid black;
+width: 600px;
+height: 150px;
+}
+
+
+#wrapper{
+	width : 1000px;
+	z-index: 100;
+	/* background: white; */
+	/*border: 1px solid green; */	
+/*
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+*/
+display: block;   
+margin-left: auto;   
+margin-right: auto; 
+/* 	padding : 10px; */
+}
+
+#bracket
+{
+display: block;   
+margin-left: auto;   
+margin-right: auto; 
+}
+
+
+#first-slide{
+
+}
+#myForm{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+display: none;
+}
+#statForm{
+	float: right; 	
+}
+#funForm{
+	float: clear;
+}
+
+#theenter{
+	margin: auto;
+}
+
+#message{
+background: #F1F1F1;
+width: 930px;
+margin: auto;
+font-family: Helvetica, Arial,sans-serif;
+font-size: 20px;
+padding: 10px;
+}

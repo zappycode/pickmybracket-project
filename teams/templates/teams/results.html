@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+        <meta http-equiv="Content-Type" content="text/html;
+        charset=iso-8859-1" />
+        <link rel="stylesheet" type="text/css" href="{% static "teams/css/bootstrap.css" %}" />
+        <link rel="stylesheet" type="text/css" href="{% static "teams/pickResult.css" %}" />
+        <script type="text/javascript" src="{% static "teams/js/bootstrap.js" %}"></script>
+
+        <title>PickMyBracket.com</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="opaque"></div>
+
+    <div style="margin:auto; margin-left: 24px;">
+        <a id="try-again" class="btn btn-large btn-info"><i class="icon-repeat icon-white"></i>  Try Again</a>
+        <a class="btn btn-large" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2Fpickmybracket%2F&amp;src=sdkpreparse" target="_blank"><i class="icon-share"></i>  Share</a>
+
+    </div>
+
+    <div id="wrapper">
+
+        <img src="{% static "teams/img/bracketNew.png" %}" id="bracket" />
+
+
+{{ teams | safe }}
+
+
+
+
+
+
+
+
+
+    <div class="loaderThing" style="position:absolute; left:50%; margin-left:-231px; top:90px; z-index: 2;">
+            <img src="{% static "teams/img/load2.png" %}" />            <img src="{% static "teams/img/loader.gif" %}" style="position:absolute; left:50%; margin-left:-16px; top:300px; z-index: 3;" />
+        </div>
+
+
+    <div class="outsideLinks" id="homeLink" onclick="location.href='/web/20130603060404/http://pickmybracket.com'"></div>
+    <div class="outsideLinks" id="homeLinkBottom" onclick="location.href='/web/20130603060404/http://pickmybracket.com'"></div>
+    <div class="outsideLinks" id="facebooklink" onclick="window.open('/web/20130603060404/http://facebook.com/pickmybracket','external');"></div>
+    <div class="outsideLinks" id="twitterlink" onclick="window.open('/web/20130603060404/http://twitter.com/pickmybracket','external');"></div>
+
+</div> <!-- closes the wrapper-->
+
+
+
+<script>
+$(document).ready(function() {
+
+
+        $(".loaderThing").delay(2000).fadeOut(1000);
+        $("#ipadLink").delay(2000).fadeOut(1000);
+        $("#opaque").delay(2000).fadeOut(1000);
+        $(".round1").delay(2000).fadeIn(3000);
+        $(".round2").delay(3000).fadeIn(3000);
+        $(".round3").delay(4000).fadeIn(3000);
+        $(".round4").delay(5000).fadeIn(3000);
+        $(".round5").delay(6000).fadeIn(3000);
+        $(".round6").delay(7000).fadeIn(3000);
+        $(".round7").delay(8000).fadeIn(3000);
+
+        var testtext = $(document).width() / 2;
+
+        $('.teamThang').css('left',testtext);
+        $('.outsideLinks').css('left',testtext);
+        $('#fbLikeTopLeft').css('left',testtext);
+
+
+
+        window.onresize = function(event)
+        {
+            var testtext = $(document).width() / 2;
+
+            $('.teamThang').css('left',testtext);
+            $('.outsideLinks').css('left',testtext);
+            $('#fbLikeTopLeft').css('left',testtext);
+        }
+
+        $('#try-again').click(function(){
+            window.setTimeout('location.reload()',0);
+
+        });
+
+        $('#printBracket').click(function(){
+            $('.teamThang').css('left', "50%");
+            window.print();
+            var testtext = $(document).width() / 2;
+
+            $('.teamThang').css('left',testtext);
+            $('.outsideLinks').css('left',testtext);
+            $('#fbLikeTopLeft').css('left',testtext);
+
+        });
+
+ });
+
+</script>
+
+</body>
+</html>

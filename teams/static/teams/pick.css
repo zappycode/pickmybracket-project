@@ -1,0 +1,428 @@
+@page
+{
+size: landscape;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+.teamThang{
+   font-size: 9px; 
+}
+
+.outsideLinks
+{
+	position: absolute;
+	left: 50%;
+	z-index: 88;
+	cursor: pointer;
+	background-image: url(img/transparent.png);
+}
+
+#tweetButton
+{
+float: right;
+}
+
+ins 
+{
+	margin: 27px !important;
+}
+
+#botttomfb
+{
+    height: 39px;
+    width: 229px;
+    top: 935px;
+    margin-left: -258px;
+}
+
+#botttomtwitter
+{
+    height: 39px;
+    width: 252px;
+    top: 935px;
+    margin-left: 5px;
+}
+
+#homeLink
+{
+	height: 100px;
+	width: 600px;
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 88;
+	cursor: pointer;
+}
+
+.startButton
+{
+	height: 110px;
+	width: 600px;
+	position: absolute;
+	top: 870px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 88;
+	cursor: pointer;
+}
+
+#likeusonfb
+{
+	height: 40px;
+	width: 240px;
+	position: absolute;
+	top: 1105px;
+	left: 50%;
+	margin-left: -270px;
+	z-index: 88;
+	cursor: pointer;
+}
+
+#followusontwitter
+{
+	height: 40px;
+	width: 270px;
+	position: absolute;
+	top: 1105px;
+	left: 50%;
+	margin-left: 1px;
+	z-index: 88;
+	cursor: pointer;
+}
+
+.statQ
+{
+	position: absolute;
+	cursor: pointer;
+	left: 50%;
+	z-index: -1;
+	height: 36px;
+	top: 371px;
+        /* border: 1px solid green; */
+}
+
+#offense
+{
+	width: 145px;
+	margin-left: -362px;
+}
+
+#rebounds
+{
+	width: 175px;
+	margin-left: -178px;
+}
+
+#defense
+{
+	width: 145px;
+	margin-left: 41px;
+}
+
+#assists
+{
+	width: 145px;
+	margin-left: 226px;
+}
+
+.randomQ
+{
+	position: absolute;
+	cursor: pointer;
+	left: 50%;
+	z-index: -1;
+	height: 36px;
+	top: 582px;
+        /* border: 1px solid green; */
+}
+
+#mascot
+{
+	width: 145px;
+	margin-left: -369px;
+}
+
+#coed
+{
+	width: 218px;
+	margin-left: -214px;
+}
+
+#partying
+{
+	width: 155px;
+	margin-left: 17px;
+}
+
+#satscores
+{
+	width: 185px;
+	margin-left: 184px;
+}
+
+
+
+#clickToBracket
+{
+    z-index: -1;    
+}
+
+body{
+	background: rgb(32,65,78);
+}
+
+
+#vid{
+	z-index: 20;
+	position: absolute;
+	top: 268px;
+	left: 50%;
+	margin-left: -350px;
+}
+
+#logo{
+	width : 600px;
+	background : url('img/logo.png');
+	height : 94px;
+	margin : 37px auto;
+	background-repeat : no-repeat;
+	cursor : pointer;
+	text-indent: -9888px;
+}
+
+.hr{
+	width : 715px;
+	height : 16px;
+	margin : auto;
+	background : url('img/horizontal_line.png');
+	background-repeat : no-repeat;
+}
+#wrapper2{
+	width : 830px;
+	display : block;
+	margin : 35px auto;
+	border : 1px solid white;
+	height : 1244px;
+	border-radius : 5px;
+	background-color : #F1F1F1;
+	-moz-box-shadow : 0 0 25px 5px rgb(40,40,45);
+	-webkit-box-shadow : 0 0 25px 5px rgb(40,40,45);
+	box-shadow : 0 0 25px 5px rgb(40,40,45);
+	
+} 
+#wrapper{
+	width : 900px;
+	z-index: 50;
+	display: block;   
+	margin-left: auto;   
+	margin-right: auto; 
+/* 	padding : 10px; */
+}
+
+#newsSpot
+{
+float: left;
+padding-left: 43px;
+}
+
+#explainSite
+{
+float: right;
+word-wrap: normal;
+width: 315px;
+padding: 5px 11px 5px 5px;
+font-size: 15px;
+font-family: Verdana, Geneva, sans-serif;
+}
+
+#first-center{
+	margin: auto;
+	position:absolute;
+	top:240px;
+	left: 50%;
+	margin-left: -365px;
+}
+
+#second-center{
+	position:absolute;
+	top:240px;
+	left: 50%;
+	margin-left: -365px;
+	display: none;
+}
+
+#secondslide{
+	display: none;
+}
+
+.showsecond{
+	display: none;
+}
+#myForm{
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+display: none;
+}
+#statForm{
+	float: right; 	
+}
+#funForm{
+	float: clear;
+}
+#fblike{
+	background:#f1f1f1;
+	border-top-right-radius:5px;
+	border-top-left-radius:5px;
+	height: 100px;
+	float: clear;
+	position: absolute;
+	top :928px;
+	left: 50%;
+	margin-left: -379px;
+
+}
+#likebutton{
+	border: none;
+	overflow: hidden;
+	width: 50px;
+	height: 90px;
+	position: absolute;
+	top: 48px;
+	left: 50%;
+	margin-left: -405px;
+}
+
+.statQradio
+{
+	position: absolute;
+	left: 50%;
+	z-index: -1;
+	top: 380px;
+	display: none;
+}
+
+#offenseradio
+{
+	margin-left: -352px;
+}
+
+#reboundsradio
+{
+	margin-left: -164px;
+}
+
+#defenseradio
+{
+	margin-left: 48px;
+}
+#assistsradio
+{
+	margin-left: 238px;
+}
+
+.randomQradio
+{
+	position: absolute;
+	left: 50%;
+	z-index: -1;
+	top: 594px;
+	display: none;
+}
+
+#mascotradio
+{
+	margin-left: -353px;
+}
+
+#coedradio
+{
+	margin-left: -204px;
+}
+
+#partyingradio
+{
+	margin-left: 25px;
+}
+#satscoresradio
+{
+	margin-left: 195px;
+}
+
+
+#theenter{
+	margin: auto;
+}
+#brag{
+	background: url('img/bragging.png');
+	background-repeat: no-repeat;
+	height: 119px;
+	width: 700px;
+	margin: 30px auto;
+}
+
+#startnow{
+	background: url('img/start.png');
+	background-repeat: no-repeat;
+	width: 617px;
+	height: 110px;
+	margin: 30px auto;
+        cursor: pointer;
+}
+#emphasize{
+	background: url('img/emphasize.png');
+	background-repeat: no-repeat;	
+	width: 710px;
+	height: 112px;
+	margin: 25px auto 10px;
+}
+#ipad{
+	background: url('img/ipad.png');
+	background-repeat: no-repeat;	
+	height: 216px;
+	width: 699px;
+	margin: 25px auto;
+        cursor: pointer;
+}
+#radio-top{
+	background: url('img/radio-top.png');
+	background-repeat: no-repeat;
+	width: 710px;
+	height: 30px;
+	margin: 20px auto;
+}
+#random-factor{
+	background: url('img/random-factor.png');
+	background-repeat: no-repeat;
+	width: 710px;
+	height: 105px;
+	margin: 20px auto 10px;
+}
+#radio-bottom{
+	background: url('img/radio-bottom.png');
+	background-repeat: no-repeat;
+	width: 710px;
+	height: 30px;
+	margin: 20px auto;
+}
+#generate{
+	background: url('img/generate.png');
+	background-repeat: no-repeat;
+	width: 634px;
+	height: 168px;
+	margin: 23px auto;
+        cursor: pointer;
+}
+#footer-social{
+	background: url('img/footer.png');
+	background-repeat: no-repeat;
+	width: 500px;
+	height: 61px;
+	margin: 30px auto;
+}
+
+/*
+Old page 5.03 seconds load time
+new Load time 1.04 seconds
+*/

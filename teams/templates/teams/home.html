@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>College Basketball Bracket Generator | PickMyBracket.com</title>
+		<link rel="stylesheet" type="text/css" href="{% static "teams/pick.css" %}" />
+		<div id="fb-root"></div>
+		<link rel="image_src" href="http://pickmybracket.com/static/teams/img/bracketThumb.png" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+		<script type="text/javascript">
+
+		$(document).ready(function(){
+
+
+                   $('#startnow').click(function(){
+		    $('.showfirst').fadeOut(1000);
+		    $('.showsecond').delay(1000).fadeIn(1000);
+                    $('.statQ').css('z-index','99');
+                    $('.randomQ').css('z-index','99');
+                    $('.statQradio').css('z-index','90');
+                    $('.randomQradio').css('z-index','90');
+                    $('.randomQradio').delay(1000).fadeIn(1000);
+                    $('.statQradio').delay(1000).fadeIn(1000);
+
+		    })
+		});
+
+		</script>
+
+	</head>
+	<body>
+
+
+
+	<div id="wrapper2">
+
+		<h1 id="logo">College Basketball Bracket Help</h1>
+
+		<div class="hr"></div>
+
+
+		<div class="hr showfirst"></div>
+                <div id="startnow" class=" showfirst"></div>
+		<div class="hr showfirst"></div>
+
+		<div id="brag" class="showfirst"></div>
+
+    <div class="outsideLinks" id="botttomfb"></div>
+    <div class="outsideLinks" id="botttomtwitter"></div>
+
+		<!-- This is the second set of things we display -->
+		<div id="emphasize" class="showsecond"></div>
+		<div id="radio-top" class="showsecond"></div>
+		<div class="hr showsecond"></div>
+		<div id="random-factor" class="showsecond"></div>
+		<div id="radio-bottom" class="showsecond"></div>
+		<div class="hr showsecond"></div>
+		<div class="showsecond" id="generate"></div>
+
+
+		<div class="hr"></div>
+		<div id="footer-social"></div>
+
+		<iframe id="newsSpot" width="448" height="252" src="http://www.youtube.com/embed/dfKKHs-7XsI" frameborder="0" allowfullscreen></iframe>
+
+		<div id="explainSite">PickMyBracket.com is a website that generates a bracket for you based off of what stats matter to you!<br /><br />Each time you generate a bracket we use our algorithm made by sports experts to give a bracket based off of your preferences. We also include some randomness in our decision making. So, no two brackets will be the same.<br /><br />There's no time like March!</div>
+		<!--
+<iframe id="likebutton-bottom"src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpickmybracket&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=90&amp;appId=220374664712847" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px;" allowTransparency="true"></iframe>
+
+-->
+		<div id="firstslide">
+			<!--	<img id="first-center" src="img/center.png"/>
+
+			<iframe id="vid" width="375" height="281" src="http://www.youtube.com/embed/yegI9nDcxUc?&rel=0&autoplay=0" frameborder="0" allowfullscreen></iframe>
+			-->
+
+		</div>
+
+		<div id="secondslide" style="display:none;">
+
+			<form id="myForm" action="{% url 'results' %}" method="get">
+				<fieldset>
+					<legend>Choose a Stat to emphasize</legend>
+						<input type="radio" name="stat" value="defense" id="defenseQ" />
+						<label for="shootper">Defense</label><br />
+						<input type="radio" name="stat" value="offense" id="offenseQ" />
+						<label for="ppg">Offense</label><br />
+						<input type="radio" name="stat" value="rebounds" id="reboundsQ" />
+						<label for="rebounds">Rebounds</label><br />
+						<input type="radio" name="stat" value="assists" id="assistsQ"/>
+						<label for="assists">Assists</label><br />
+				</fieldset>
+				<fieldset>
+					<legend>Choose a random factor to emphasize</legend>
+						<input type="radio" name="fun" value="coed" id="coedQ" />
+						<label for="coed">Coed Hotness</label><br />
+						<input type="radio" name="fun" value="mascot" id="mascotQ" />
+						<label for="mascot">Mascot</label><br />
+						<input type="radio" name="fun" value="partying" id="partyingQ"/>
+						<label for="partying">Partying</label><br />
+						<input type="radio" name="fun" value="sat" id="SATQ" />
+						<label for="temp">SAT Scores</label><br />
+				</fieldset>
+
+			</form>
+
+
+
+		</div>
+
+                <div class="middle statQ" id="offense"></div>
+			<div class="middle statQ" id="rebounds"></div>
+			<div class="middle statQ" id="defense"></div>
+			<div class="middle statQ" id="assists"></div>
+
+			<img src="static/teams/img/roff.png" class="middle statQradio" id="offenseradio" />
+			<img src="static/teams/img/roff.png" class="middle statQradio" id="reboundsradio" />
+			<img src="static/teams/img/roff.png" class="middle statQradio" id="defenseradio" />
+			<img src="static/teams/img/roff.png" class="middle statQradio" id="assistsradio" />
+
+			<div class="middle randomQ" id="mascot"></div>
+			<div class="middle randomQ" id="coed"></div>
+			<div class="middle randomQ" id="partying"></div>
+			<div class="middle randomQ" id="satscores"></div>
+
+			<img src="static/teams/img/roff.png" class="middle randomQradio" id="mascotradio" />
+			<img src="static/teams/img/roff.png" class="middle randomQradio" id="coedradio" />
+			<img src="static/teams/img/roff.png" class="middle randomQradio" id="partyingradio" />
+			<img src="static/teams/img/roff.png" class="middle randomQradio" id="satscoresradio" />
+
+			<div id="homeLink" style="display:none;" onclick="location.href='http://pickmybracket.com';">
+			</div>
+			<div id="startButton" style="display:none;"  onclick="goToResult()">
+			</div>
+
+	<!-- <iframe id="fblike" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpickmybracket&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="float:left; border:none; overflow:hidden; height:80px;" allowTransparency="true"></iframe> -->
+
+
+
+
+	</div><!--End of wraper-->
+
+
+	</body>
+
+<script type="text/javascript">
+
+
+                $('#generate').click(function() {
+                    $('#myForm').submit();
+                });
+
+                $('#ipad').click(function() {
+                    window.open('http://www.facebook.com/pickmybracket', 'external');
+                });
+
+                $('#logo').click(function() {
+                    location.href='http://www.pickmybracket.com';
+                });
+
+                $('#botttomfb').click(function() {
+                    window.open('http://www.facebook.com/pickmybracket', 'external');
+                });
+
+                $('#botttomtwitter').click(function() {
+                    window.open('http://www.twitter.com/pickmybracket', 'external');
+                });
+
+		$('#offense').click(function() {
+			$('input:radio[name=stat]').filter('[value=offense]').attr('checked', true);
+			selectOne('.statQ', '#offense');
+		});
+		$('#rebounds').click(function() {
+			$('input:radio[name=stat]').filter('[value=rebounds]').attr('checked', true);
+			selectOne('.statQ', '#rebounds');
+		});
+		$('#defense').click(function() {
+			$('input:radio[name=stat]').filter('[value=defense]').attr('checked', true);
+			selectOne('.statQ', '#defense');
+		});
+		$('#assists').click(function() {
+			$('input:radio[name=stat]').filter('[value=assists]').attr('checked', true);
+			selectOne('.statQ', '#assists');
+		});
+
+		$('#mascot').click(function() {
+			$('input:radio[name=fun]').filter('[value=mascot]').attr('checked', true);
+			selectOne('.randomQ', '#mascot');
+		});
+		$('#coed').click(function() {
+			$('input:radio[name=fun]').filter('[value=coed]').attr('checked', true);
+			selectOne('.randomQ', '#coed');
+		});
+		$('#partying').click(function() {
+			$('input:radio[name=fun]').filter('[value=partying]').attr('checked', true);
+			selectOne('.randomQ', '#partying');
+		});
+		$('#satscores').click(function() {
+			$('input:radio[name=fun]').filter('[value=sat]').attr('checked', true);
+			selectOne('.randomQ', '#satscores');
+		});
+
+		function selectOne(className, idName)
+		{
+			//$(className).css('border','none');
+			//$(idName).css('border','1px solid green');
+			$(className+'radio').attr("src", "static/teams/img/roff.png");
+			$(idName+'radio').attr("src", "static/teams/img/ron.png");
+		}
+
+
+    </script>
+
+</html>
