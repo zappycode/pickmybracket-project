@@ -25,7 +25,7 @@ SECRET_KEY = '4en#!72ron-9dz%*csip&l7l4cbbv2gxb37d1t$t1kf1=wg2pe'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pickmybracket.com','www.pickmybracket.com','159.65.101.113']
 
 
 # Application definition
@@ -118,4 +118,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
