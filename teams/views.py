@@ -9,22 +9,22 @@ def home(request):
 
 def midwestTeams():
     teams = []
-    teams.append(Team(rank=1, name='MidWest', region='midwest'))
-    teams.append(Team(rank=16, name='MidWest', region='midwest'))
-    teams.append(Team(rank=8, name='MidWest', region='midwest'))
-    teams.append(Team(rank=9, name='MidWest', region='midwest'))
-    teams.append(Team(rank=5, name='MidWest', region='midwest'))
-    teams.append(Team(rank=12, name='MidWest', region='midwest'))
-    teams.append(Team(rank=4, name='MidWest', region='midwest'))
-    teams.append(Team(rank=13, name='MidWest', region='midwest'))
-    teams.append(Team(rank=3, name='MidWest', region='midwest'))
-    teams.append(Team(rank=14, name='MidWest', region='midwest'))
-    teams.append(Team(rank=6, name='MidWest', region='midwest'))
-    teams.append(Team(rank=11, name='MidWest', region='midwest'))
-    teams.append(Team(rank=7, name='MidWest', region='midwest'))
-    teams.append(Team(rank=10, name='MidWest', region='midwest'))
-    teams.append(Team(rank=2, name='MidWest', region='midwest'))
-    teams.append(Team(rank=15, name='MidWest', region='midwest'))
+    teams.append(Team(rank=1, name='Virginia', region='midwest'))
+    teams.append(Team(rank=16, name='UMBC', region='midwest'))
+    teams.append(Team(rank=8, name='Creighton', region='midwest'))
+    teams.append(Team(rank=9, name='Kansas St.', region='midwest'))
+    teams.append(Team(rank=5, name='Kentucky', region='midwest'))
+    teams.append(Team(rank=12, name='Davidson', region='midwest'))
+    teams.append(Team(rank=4, name='Arizona', region='midwest'))
+    teams.append(Team(rank=13, name='Buffalo', region='midwest'))
+    teams.append(Team(rank=3, name='Tennessee', region='midwest'))
+    teams.append(Team(rank=14, name='Wright State', region='midwest'))
+    teams.append(Team(rank=6, name='Miami (fla.)', region='midwest'))
+    teams.append(Team(rank=11, name='Loyola Chicago', region='midwest'))
+    teams.append(Team(rank=7, name='Nevada', region='midwest'))
+    teams.append(Team(rank=10, name='Texas', region='midwest'))
+    teams.append(Team(rank=2, name='Cincinnati', region='midwest'))
+    teams.append(Team(rank=15, name='Georgia State', region='midwest'))
     return teams
 
 def westTeams():
